@@ -15,7 +15,7 @@ type Adapter struct {
 }
 
 func NewAdapter() (*Adapter, error) {
-	api := hopperApi.CreateHopperApi(hopperApi.HopperDev)
+	api := hopperApi.CreateHopperApi(hopperApi.HopperProd)
 	ok, err := api.CheckConnectivity()
 	if !ok {
 		return nil, err
